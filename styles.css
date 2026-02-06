@@ -37,3 +37,20 @@
   justify-content: center;
   align-items: center;
 }
+
+/* Transformation Image Styling */
+.transformation-image-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.transformation-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: contain;
+}
