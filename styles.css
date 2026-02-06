@@ -17,3 +17,15 @@
   transform: scale(1.05);
   filter: brightness(1.1);
 }
+
+/* Premium Athlete Image Sizing */
+.premium-athlete-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  animation: fadeUp 0.8s ease-out 0.3s both;
+}
