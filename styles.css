@@ -29,3 +29,10 @@
   margin: 0 auto;
   animation: fadeUp 0.8s ease-out 0.3s both;
 }
+
+/* Hero Image Container */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
