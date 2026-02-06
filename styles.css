@@ -92,3 +92,242 @@
 .program-card[data-bg="championship"] {
   background-image: url('./championship.jpg');
 }
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Tablet and Small Desktop - 1024px */
+@media (max-width: 1024px) {
+  .hero-container,
+  .programs-grid,
+  .authority-grid,
+  .pillars-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .resources-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  /* Navigation */
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--card-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 999;
+    border-left: 2px solid rgba(255, 45, 45, 0.2);
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-toggle {
+    display: block;
+    z-index: 1001;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 120px 1.5rem 80px;
+  }
+  
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  
+  .premium-athlete-img {
+    max-width: 100%;
+  }
+  
+  /* Authority Section */
+  .authority,
+  .dom-living,
+  .programs,
+  .transformation,
+  .resources {
+    padding: 80px 1.5rem;
+  }
+  
+  .authority h2,
+  .dom-living h2,
+  .programs h2,
+  .transformation h2,
+  .resources h2 {
+    font-size: 2.5rem;
+  }
+  
+  .authority-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  /* DOM Living */
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Programs */
+  .programs-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .program-card.featured {
+    transform: none;
+  }
+  
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  /* Resources */
+  .resources-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .resource-stats h4 {
+    font-size: 2rem;
+  }
+  
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+  /* Typography */
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .authority h2,
+  .dom-living h2,
+  .programs h2,
+  .transformation h2,
+  .resources h2 {
+    font-size: 2rem;
+  }
+  
+  /* Navigation */
+  .nav-menu {
+    width: 85%;
+  }
+  
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+  
+  /* Hero */
+  .hero {
+    padding: 100px 1rem 60px;
+  }
+  
+  .hero-label {
+    font-size: 0.7rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    padding: 14px 30px;
+    font-size: 0.9rem;
+  }
+  
+  /* Sections */
+  .authority,
+  .dom-living,
+  .programs,
+  .transformation,
+  .resources {
+    padding: 60px 1rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  /* Cards */
+  .authority-card,
+  .pillar-card,
+  .program-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  /* Resource Stats */
+  .resource-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-stats h4 {
+    font-size: 2.5rem;
+  }
+  
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Transformation Image */
+  .transformation-image {
+    max-width: 100%;
+  }
+}
