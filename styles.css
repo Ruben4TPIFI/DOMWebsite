@@ -86,6 +86,7 @@
 .program-card[data-bg="hybrid"] {
   background-image: url('./hybrid.jpg');
     background-position: center 30%;
+    background-size: 110%;
 }
 
 .program-card[data-bg="championship"] {
