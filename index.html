@@ -8,6 +8,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+  <script>
+
+const newsletter = document.querySelector('.newsletter');
+
+window.addEventListener('scroll', () => {
+
+  const rect = newsletter.getBoundingClientRect();
+
+  if(rect.top < window.innerHeight - 100){
+    newsletter.classList.add('visible');
+  }
+
+});
+
+</script>
 <body>
 <nav class="navbar">
 <div class="nav-container">
@@ -137,46 +152,43 @@
 </div>
 </div>
 </section>
+<!-- ============================= -->
+<!-- DOM LIVING EMAIL SECTION -->
+<!-- ============================= -->
+
 <section id="newsletter" class="newsletter">
   <div class="container">
 
-    <h2>Stay Connected</h2>
+    <h2 class="newsletter-title">
+      Join the DOM Living Journey.
+    </h2>
 
-    <div class="newsletter-content">
+    <p class="newsletter-subtitle">
+      Training insights, system updates, and future releases.
+      Built for those becoming complete athletes.
+    </p>
 
-      <p>
-        Join the DOM Living journey.
-        Receive training insights, updates, and new program releases.
-      </p>
+    <form id="emailForm" class="newsletter-form">
 
-      <form id="emailForm">
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Enter your email"
+        required
+      >
 
-        <input 
-          type="text" 
-          name="name" 
-          placeholder="First Name"
-          required
-        >
+      <button type="submit">
+        Join
+      </button>
 
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Enter your email"
-          required
-        >
+    </form>
 
-        <button type="submit" class="btn btn-primary">
-          Join
-        </button>
+    <small class="newsletter-note">
+      No spam. Just real progress.
+    </small>
 
-      </form>
-
-      <small>No spam. Just real updates.</small>
-
-    </div>
   </div>
 </section>
-
 <div class="resource-stats">
 <div><h4>5+</h4><p>Athletes</p></div>
 <div><h4>3+</h4><p>Years</p></div>
