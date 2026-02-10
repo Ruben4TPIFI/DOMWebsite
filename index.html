@@ -8,21 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-  <script>
-
-const newsletter = document.querySelector('.newsletter');
-
-window.addEventListener('scroll', () => {
-
-  const rect = newsletter.getBoundingClientRect();
-
-  if(rect.top < window.innerHeight - 100){
-    newsletter.classList.add('visible');
-  }
-
-});
-
-</script>
 <body>
 <nav class="navbar">
 <div class="nav-container">
@@ -152,27 +137,29 @@ window.addEventListener('scroll', () => {
 </div>
 </div>
 </section>
+  
 <!-- ============================= -->
-<!-- DOM LIVING EMAIL SECTION -->
+<!-- PREMIUM DOM LIVING JOIN SECTION -->
 <!-- ============================= -->
 
 <section id="newsletter" class="newsletter">
-  <div class="container">
+
+  <div class="newsletter-inner">
 
     <h2 class="newsletter-title">
-      Join the DOM Living Journey.
+      Join the DOM Living Journey
     </h2>
 
     <p class="newsletter-subtitle">
-      Training insights, system updates, and future releases.
+      Training insights, philosophy updates, and future system releases.
       Built for those becoming complete athletes.
     </p>
 
     <form id="emailForm" class="newsletter-form">
 
       <input 
-        type="email" 
-        name="email" 
+        type="email"
+        name="email"
         placeholder="Enter your email"
         required
       >
@@ -183,12 +170,16 @@ window.addEventListener('scroll', () => {
 
     </form>
 
+    <div class="newsletter-divider"></div>
+
     <small class="newsletter-note">
       No spam. Just real progress.
     </small>
 
   </div>
+
 </section>
+
 <div class="resource-stats">
 <div><h4>5+</h4><p>Athletes</p></div>
 <div><h4>3+</h4><p>Years</p></div>
@@ -236,5 +227,28 @@ if (navToggle) {
 }
 </script>
   <script src="script.js"></script>
+  <script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const newsletter = document.querySelector('.newsletter');
+
+  if(newsletter){
+
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          newsletter.classList.add("visible");
+        }
+      });
+    });
+
+    observer.observe(newsletter);
+
+  }
+
+});
+
+</script>
 </body>
 </html>
